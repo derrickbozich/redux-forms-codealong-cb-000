@@ -35,5 +35,11 @@ class CreateTodo extends Component {
  }
 };
 
+mapDispatchToProps = dispatch => {
+  return {
+    addTodo: () => dispatch(<some action>)
+  }
+}
+
 export default CreateTodo;
 export default connect(null, mapDispatchToProps)(CreateTodo);
