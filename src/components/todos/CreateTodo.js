@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
- 
+
 class CreateTodo extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      text: '',
+    };
+  }
+
+  handleChange(event) {
+    this.setState({
+      text: event.target.value
+    });
+  };
   render(){
     return(
       <div>
@@ -16,5 +29,5 @@ class CreateTodo extends Component {
     );
   }
 };
- 
+
 export default CreateTodo;
